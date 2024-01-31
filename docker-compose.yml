@@ -1,10 +1,7 @@
 version: "3.7"
 services:
   frontend:
-    build:
-      context: frontend
-      args:
-        FRONT_END_PORT: ${FRONT_END_PORT}
+    image: aminealami7/frontend
     ports:
       - ${FRONT_END_PORT}:${FRONT_END_PORT}
     stdin_open: true
@@ -16,10 +13,7 @@ services:
   server:
     container_name: server
     restart: always
-    build:
-      context: server
-      args:
-        NODE_PORT: ${NODE_PORT}
+    image: aminealami7/server
     ports:
       - ${NODE_PORT}:${NODE_PORT}
     volumes:

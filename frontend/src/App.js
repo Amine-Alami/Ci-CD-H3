@@ -1,8 +1,10 @@
 import React from 'react';
+//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {request} from './utilities/httpRequestHandler'
 import './App.scss';
 import AddTodo from "./components/AddTodo";
 import TodoList from "./components/TodoList";
+import LandingPage from './components/LandingPage';
 
 export default class App extends React.Component{
 
@@ -38,19 +40,19 @@ export default class App extends React.Component{
 
   render() {
     return (
-        <div className="App container">
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-xs-12 col-sm-8 col-md-8 offset-md-2">
-                <h1>Todos</h1>
-                  <div className="todo-app">
-                      <AddTodo handleAddTodo={(value) => {this._handleAddTodo(value)}}/>
-                      <TodoList todos={this.state.todos}/>
-                  </div>
-              </div>
+      <div className="App container">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-xs-12 col-sm-8 col-md-8 offset-md-2">
+              <h1>Todos</h1>
+                <div className="todo-app">
+                    <AddTodo handleAddTodo={(value) => {this._handleAddTodo(value)}}/>
+                    <TodoList todos={this.state.todos}/>
+                </div>
             </div>
           </div>
         </div>
+      </div>
     );
   }
 }
