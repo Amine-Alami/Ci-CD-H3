@@ -1,5 +1,8 @@
 # Docker TODO app with Node JS, React and MongoDB.
 
+[![Frontend CI](https://github.com/Amine-Alami/Ci-CD-H3/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/Amine-Alami/Ci-CD-H3/actions/workflows/frontend-ci.yml) [![Server CI](https://github.com/Amine-Alami/Ci-CD-H3/actions/workflows/server-ci.yml/badge.svg)](https://github.com/Amine-Alami/Ci-CD-H3/actions/workflows/server-ci.yml) [![.github/workflows/compose-ci.yml](https://github.com/Amine-Alami/Ci-CD-H3/actions/workflows/compose-ci.yml/badge.svg)](https://github.com/Amine-Alami/Ci-CD-H3/actions/workflows/compose-ci.yml)
+
+
 ## Overview
 
 This project is part of a CI/CD course
