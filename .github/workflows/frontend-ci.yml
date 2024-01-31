@@ -7,27 +7,28 @@ on:
     branches: [ "main" ]
 
 frontend:
-  runs-on: ubuntu-20.04
+  frontend-ci:
+    runs-on: ubuntu-20.04
 
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '10.x'
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '10.x'
 
-    - name: Install Frontend Dependencies
-      run: |
-        npm install
+      - name: Install Frontend Dependencies
+        run: |
+          npm install
 
-    - name: Run Frontend Tests
-      run: |
-        # Todo
+      - name: Run Frontend Tests
+        run: |
+          # Todo
 
-    - name: Build and Push Frontend Docker Image
-      run: |
-        docker build -t aminealami7/frontend ./frontend
-        echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
-        docker push aminealami7/frontend
+      - name: Build and Push Frontend Docker Image
+        run: |
+          docker build -t aminealami7/frontend ./frontend
+          echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+          docker push aminealami7/frontend
