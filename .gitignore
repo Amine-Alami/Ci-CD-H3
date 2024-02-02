@@ -4,3 +4,6 @@ server/node_modules/
 data
 .env
 my.secrets
+frontend/nginx/*.crt
+frontend/nginx/*.key
+frontend/build
