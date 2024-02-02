@@ -17,7 +17,7 @@ RUN npm install
 COPY . ./
 
 # Serve the app
-RUN npm build
+RUN npm run build
 
 # ngnix
 FROM nginx:stable-alpine
