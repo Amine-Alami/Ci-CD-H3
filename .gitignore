@@ -6,3 +6,4 @@ data
 my.secrets
 frontend/nginx/*.crt
 frontend/nginx/*.key
+frontend/build
