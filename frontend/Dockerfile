@@ -27,7 +27,7 @@ COPY . /usr/src/app
 EXPOSE ${FRONT_END_PORT}
 
 # Serve the app
-CMD ["npm", "start"]
+CMD ["npm", "run", "build"]
 
 # ngnix
 FROM nginx:stable-alpine
