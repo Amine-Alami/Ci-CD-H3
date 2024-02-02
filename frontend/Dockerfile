@@ -1,5 +1,5 @@
 # Create image based on the official Node image from dockerhub
-FROM node:10 as build
+FROM node:17 as build
 
 # Create app directory
 #WORKDIR /usr/src/app
