@@ -1,5 +1,5 @@
 # Create image based on the official Node image from dockerhub
-FROM node:10
+FROM node:10 as build
 
 #Argument that is passed from docer-compose.yaml file
 ARG FRONT_END_PORT
@@ -30,7 +30,7 @@ EXPOSE ${FRONT_END_PORT}
 CMD ["npm", "start"]
 
 # ngnix
-FROM nginx:stable-alpine as build
+FROM nginx:stable-alpine
 COPY --from=build /app/build /usr/share/nginx/html
 COPY --from=build /app/nginx/nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
